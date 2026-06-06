@@ -7,6 +7,6 @@ pool:
   vmImage: 'ubuntu-latest'  # Use Microsoft-hosted Ubuntu agent
 
 steps:
-- script: mvn validate
-  displayName: 'validate Maven Project'
+- script: mvn test
+  displayName: 'Unit test script for Project'
   
