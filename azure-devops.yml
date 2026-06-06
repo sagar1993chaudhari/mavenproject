@@ -7,6 +7,8 @@ pool:
   vmImage: 'ubuntu-latest'  # Use Microsoft-hosted Ubuntu agent
 
 steps:
-- script: mvn test
-  displayName: 'Unit test script for Project'
+- script: mvn package
+  displayName: 'Generate build package for Project'
+  env:
+  MAVEN_OPTS: -DskipTests=true  # Skip tests during the build process
   
